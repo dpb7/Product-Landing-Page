@@ -2,12 +2,12 @@
 
 body {
     margin: 0;
+    box-sizing: border-box;
     font-family: 'Lato', sans-serif;
 }
 
 header {
-    width: 100%;
-    min-width: 300px;
+    min-width: 200px;
     text-align: center;
 }
 
@@ -21,17 +21,10 @@ header {
 }
 
 .onTop {
-    padding: 0 100px;
+    padding: 0 50px;
     position: relative;
     top: -375px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    
     color: #4C5C87;
 }
 
@@ -49,12 +42,11 @@ header > p {
 
 .btn {
     width: 150px;
-    padding: 15px 5px;
-    display: inline-block;
+    padding: 15px 25px;
     background-color: #4C5C87;
     color: #fff;
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: 30px;
     font-size: 1.1rem;
 }
 
@@ -68,8 +60,10 @@ header > p {
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
     h1 {
         font-size: 2.5rem;
     }
+    header > p {
+        margin-bottom: 80px;
 }

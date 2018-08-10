@@ -39,7 +39,7 @@ h1 {
     margin: 0;
     font-family: 'Indie Flower', cursive;
     text-transform: uppercase;
-    font-size: 4.5rem;
+    font-size: 5rem;
 }
 
 header > p {
@@ -70,6 +70,6 @@ header > p {
 
 @media (max-width: 450px) {
     h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 }

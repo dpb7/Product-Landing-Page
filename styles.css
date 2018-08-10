@@ -1,0 +1,75 @@
+
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    width: 100%;
+    min-width: 300px;
+    text-align: center;
+}
+
+.transparent {
+    background-image: url(https://github.com/dpb7/Product-Landing-Page/blob/master/img/nathan-fertig-271363-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    opacity: 0.5;
+}
+
+.onTop {
+    padding: 0 100px;
+    position: relative;
+    top: -375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #4C5C87;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Indie Flower', cursive;
+    text-transform: uppercase;
+    font-size: 4.5rem;
+}
+
+header > p {
+    line-height: 1.5;
+    margin-bottom: 50px;
+}
+
+.btn {
+    width: 150px;
+    padding: 15px 5px;
+    display: inline-block;
+    background-color: #4C5C87;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 700px) {
+    .onTop {
+        top: -450px;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 3rem;
+    }
+}

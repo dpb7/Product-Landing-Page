@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Micro Navbar (Using CSS Only)</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+    
+        }
+
+        nav {
+            background-color: #999999;
+            padding: 0.7rem 3rem;
+            overflow: hidden; /*makes the nav container grow with the content when using float*/
+            
+        }
+        nav ul {
+            list-style: none;  
+            margin: 0; 
+            vertical-align: middle; 
+        }
+
+        .logo {
+            display: inline-block;
+            font-size: 1.3rem;
+        }
+
+        .items {
+            float: right;
+            margin-right: 4rem;
+            line-height: 1.5rem;
+        }
+
+        .items ul {
+            display: inline-block;
+        }
+
+        .items ul li {
+            float: left;
+            padding-right: 3rem;   
+        }
+        
+        @media (max-width:500px) {
+            .logo {
+                float: left;
+                padding-left:20vw;
+            
+            }
+            .items {
+                float: left;
+                padding-left: 20vw;
+            }
+            .items ul li {
+                float: none;
+                padding-right: 0;
+               
+            }
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo"> 
+            <ul>
+                <li>Logo</li>
+            </ul>
+        </div>
+
+        <div class="items">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>

@@ -10,9 +10,6 @@ body {
     background-color: #F7F8FA;
     padding: 0.7rem 2rem;
     overflow: hidden;
-    position: fixed;
-    left: 0;
-    right: 0;
 }
 
 .nav-logo a {
@@ -64,7 +61,7 @@ header {
     text-align: center;
 }
 
-.image {
+.transparent {
     background-image: url(https://github.com/dpb7/Product-Landing-Page/blob/master/img/nathan-fertig-271363-unsplash.jpg?raw=true);
     background-position: center;
     background-size: cover;
@@ -72,32 +69,26 @@ header {
     height: 500px;
     opacity: 0.5;
     box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: -1;
-
 }
 
-.heading {
-    color: #4C5C87; 
-    z-index: 2;
+/* .onTop {
+    padding: 0 50px;
+    position: relative;
+    top: -375px;
     
-}
+    color: #4C5C87;
+} */
 
 h1 {
     margin: 0;
-    
-    padding-top: 7rem;
     font-family: 'Indie Flower', cursive;
     text-transform: uppercase;
     font-size: 5rem;
 }
 
-.heading p {
+header > p {
     line-height: 1.5;
-    margin-top: 2rem;
-    margin-bottom: 6rem;
+    margin-bottom: 50px;
 }
 
 .btn {
@@ -111,7 +102,6 @@ h1 {
 }
 
 .main {
-    margin: 10rem;
     text-align: center;
 }
 
@@ -142,17 +132,14 @@ h1 {
         float: none;
         padding: 0;
     }
-    .image {
-        top: 9rem;
-    }
-    h1 {
-        padding-top: 15rem;
-    }
 
 }
 
 @media (max-width: 700px) {
-    
+    .onTop {
+        top: -450px;
+    }
+
     h1 {
         font-size: 4rem;
     }
@@ -160,7 +147,6 @@ h1 {
 
 @media (max-width: 500px) {
     h1 {
-        padding-top: 16rem;
         font-size: 2.5rem;
     }
     header > p {

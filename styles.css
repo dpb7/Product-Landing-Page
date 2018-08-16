@@ -4,13 +4,15 @@ body {
     box-sizing: border-box;
     margin: 0;
     font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    color: #4C5C87;
 }
 
 #nav-bar {
     background-color: #F7F8FA;
     padding: 0.7rem 2rem;
     overflow: hidden;
-    position: fixed;
+    /* position: fixed; */
     left: 0;
     right: 0;
 }
@@ -66,10 +68,10 @@ header {
 
 .image {
     background-image: url(https://github.com/dpb7/Product-Landing-Page/blob/master/img/nathan-fertig-271363-unsplash.jpg?raw=true);
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 500px;
+    height: 665px;
     opacity: 0.5;
     box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
     position: absolute;
@@ -79,9 +81,11 @@ header {
 
 }
 
-.heading {
+.showcase {
     color: #4C5C87; 
     z-index: 2;
+    height: 665px;
+    
     
 }
 
@@ -94,10 +98,11 @@ h1 {
     font-size: 5rem;
 }
 
-.heading p {
-    line-height: 1.5;
+.showcase p {
     margin-top: 2rem;
     margin-bottom: 6rem;
+    font-family: 'Indie Flower', cursive;
+    font-size: 3rem;
 }
 
 .btn {
@@ -110,10 +115,82 @@ h1 {
     font-size: 1.1rem;
 }
 
-.main {
-    margin: 10rem;
-    text-align: center;
+.wrapper {
+    margin-top: 8rem;
 }
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    align-self: center;
+    margin-top: 8rem;
+    background-color: #F4F7FB;
+    padding: 3rem;
+}
+
+.main {
+    height: 400px;
+    margin-right: 2rem;
+    grid-area: "main";
+    
+}
+
+.main h3 {
+    margin-top: 0;
+}
+
+.main-photo {
+    background-image: url(https://images.unsplash.com/photo-1492707317997-96ae440f1878?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f18c224dba7a1aa0a9fbfe4370157c30&auto=format&fit=crop&w=800&q=60);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-area: "main-area";
+    min-height: 200px;
+}
+
+
+.section { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr 3fr);
+    grid-gap: 1.5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+   
+ }
+ 
+ .icon {
+     margin: 0 10px;
+     position: relative;
+     top: 10px;
+
+ }
+
+.pro-icon {
+    grid-area: "pro-icon";
+}
+.sup-icon {
+    grid-area: "sup-icon";
+}
+.pow-icon {
+    grid-area: "pow-icon";
+}
+
+.pro-head {
+    grid-area: "pro-head";
+}
+.sup-head {
+    grid-area: "sup-head";
+}
+.pow-head {
+    grid-area: "pow-head";
+}
+
+ .heading h3 {
+     margin: 0;
+ }
+
+ 
 
 @media (max-width: 1000px) {
     .nav-logo {
@@ -146,25 +223,25 @@ h1 {
         top: 9rem;
     }
     h1 {
-        padding-top: 15rem;
+        padding-top: 5rem;
+        font-size: 3rem;
     }
 
-}
-
-@media (max-width: 700px) {
-    
-    h1 {
-        font-size: 4rem;
+    .showcase p {
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
     }
+
 }
 
 @media (max-width: 500px) {
     h1 {
-        padding-top: 16rem;
+        padding-top: 8rem;
         font-size: 2.5rem;
     }
-    header > p {
-        margin-bottom: 80px;
+    .showcase p {
+        margin-bottom: 3rem;
+        font-size: 2rem;
     }
 
     #nav-bar {
@@ -177,5 +254,50 @@ h1 {
     .nav-items {
         position: relative;
         top: -25px;
+    }
+
+    .wrapper {
+        margin-top: 1rem;
+    }
+
+    .section {
+        
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "pro-icon"
+        "pro-head"
+        "sup-icon"
+        "sup-head"
+        "pow-icon"
+        "pow-head"
+    }
+
+    .icon {
+        margin: 0 10px;
+        position: static;
+        
+   
+    }
+
+    .about {
+        text-align: center;
+        margin-top: 3rem;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "main"
+        "main-photo"
+    }
+}
+
+@media (max-width: 700px) {
+    .section {
+        grid-template-columns: repeat(2, 1fr 3fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .section {
+        grid-template-columns: 1fr 3fr;
     }
 }

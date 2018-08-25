@@ -1,5 +1,4 @@
 
-
 body {
     box-sizing: border-box;
     margin: 0;
@@ -12,7 +11,6 @@ body {
     background-color: #F7F8FA;
     padding: 0.7rem 2rem;
     overflow: hidden;
-    /* position: fixed; */
     left: 0;
     right: 0;
 }
@@ -24,6 +22,7 @@ body {
     color: #4C5C87;
     font-size: 1.5rem;
 }
+
 .nav-items a {
     color: #999999;
     text-decoration: none;
@@ -124,9 +123,10 @@ h1 {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1.5rem;
     align-self: center;
-    margin-top: 8rem;
+    margin-top: 5rem;
     background-color: #F4F7FB;
-    padding: 3rem;
+    padding: 8rem 5rem;
+    
 }
 
 .main {
@@ -146,8 +146,11 @@ h1 {
     background-size: cover;
     background-repeat: no-repeat;
     grid-area: "main-area";
-    min-height: 200px;
+    min-height: 300px;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
+
+
 
 
 .section { 
@@ -158,6 +161,8 @@ h1 {
     margin-right: 3rem;
    
  }
+
+
  
  .icon {
      margin: 0 10px;
@@ -165,6 +170,9 @@ h1 {
      top: 10px;
 
  }
+
+
+
 
 .pro-icon {
     grid-area: "pro-icon";
@@ -186,8 +194,21 @@ h1 {
     grid-area: "pow-head";
 }
 
+
+
+
  .heading h3 {
      margin: 0;
+ }
+
+ 
+
+ footer {
+    height: 50px;
+   
+    background-color: #fff;
+    text-align: center;
+
  }
 
  
@@ -201,7 +222,29 @@ h1 {
         text-align: center;
         padding: 0;
     }
+
+    .section { 
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "pro-icon"
+        "pro-head"
+        "sup-icon"
+        "sup-head"
+        "pow-icon"
+        "pow-head"
+    }
+
+    .icon {
+        margin: 0 10px;
+        position: static;
+    }
 }
+
+
+
+
+
 
 @media (max-width: 900px) {
    
@@ -234,7 +277,11 @@ h1 {
 
 }
 
-@media (max-width: 500px) {
+
+
+
+
+@media (max-width: 700px) {
     h1 {
         padding-top: 8rem;
         font-size: 2.5rem;
@@ -260,44 +307,30 @@ h1 {
         margin-top: 1rem;
     }
 
-    .section {
-        
-        text-align: center;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "pro-icon"
-        "pro-head"
-        "sup-icon"
-        "sup-head"
-        "pow-icon"
-        "pow-head"
-    }
-
-    .icon {
-        margin: 0 10px;
-        position: static;
-        
-   
-    }
+    
 
     .about {
         text-align: center;
-        margin-top: 3rem;
+        padding-bottom: 8rem;
         grid-template-columns: 1fr;
         grid-template-areas: 
         "main"
-        "main-photo"
+        "main-photo";
     }
+
+    .main {
+        margin-right: 0;
+        max-height: 325px;
+        
+    }
+
+    .main-photo {
+        margin-top: 100px;
+    }
+
+   
 }
 
-@media (max-width: 700px) {
-    .section {
-        grid-template-columns: repeat(2, 1fr 3fr);
-    }
-}
 
-@media (max-width: 500px) {
-    .section {
-        grid-template-columns: 1fr 3fr;
-    }
-}
+
+
